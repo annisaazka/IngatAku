@@ -1,0 +1,41 @@
+.landing{
+	display: grid;
+    place-items: center;
+}
+.login{
+	display: grid;
+      place-items: center;
+}
+
+.Register{
+	display: grid;
+    place-items: center;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+	background: linear-gradient(90deg, #C59EF7 0%, #ABE0E8 100%);
+    box-shadow: 0px 1px 8px #C59EF7;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.button a:hover {
+    cursor: pointer;
+    box-shadow: 0px 1px 15px 3px #9a5fe898;
+	
+}

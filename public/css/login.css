@@ -1,0 +1,148 @@
+body 
+{
+  font-family: 'Poppins'; 
+  background: linear-gradient(180deg, #C59EF7 0%, rgba(158, 242, 247, 0.99) 100%);
+}
+
+
+h1{
+    text-align: center;
+    color: #414141;
+    margin-bottom: 0%;
+}
+
+h4{
+    text-align: center;
+    color:#414141;
+    font-size: 14px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+form{
+    background-color: rgba(229, 235, 232, 0.347);
+    border-radius: 8px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+    height: 410px;
+    margin: 40px auto 46px auto;
+    width: 350px;
+    padding: 1%;
+}
+
+input[type=text]{
+    width: 100%;
+    margin: 12px auto 12px auto;
+    border-radius: 25px;
+    padding: 14px 18px;
+    box-sizing: border-box;
+    background-color: rgba(229, 235, 232, 0.347);
+    border:none;
+    box-shadow: 1px 2px 8px #9a5fe860;
+}
+
+input[type=password]{
+    width: 100%;
+    margin: 12px auto -10px auto;
+    border-radius: 25px;
+    padding: 14px 18px;
+    box-sizing: border-box;
+    background-color: rgba(229, 235, 232, 0.347);
+    border:none;
+    box-shadow: 1px 2px 8px #9a5fe860;
+}
+
+button {
+    background: linear-gradient(90deg, #C59EF7 0%, #ABE0E8 100%);
+    box-shadow: 0px 1px 8px #C59EF7;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: none;
+    height: 42.3px;
+    transition: 0.25s;
+    width: 153px;
+    margin: 30px auto 0px 80px;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 0px 1px 15px 3px #9a5fe898;
+}
+
+.headingsContainer{
+    font-weight:600;
+    text-align: center;
+    color: #414141;
+}
+
+.headingsContainer p{
+    color: #414141;
+    font-size: 16px;
+    padding-top: 1px;
+    margin-bottom: 8px;
+}
+.mainContainer{
+    padding: 16px;
+}
+
+.mainContainer label{
+    font-size: 12px;
+    color: #414141;
+}
+
+.subcontainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.subcontainer a{
+    font-size: 11px;
+    margin: 0px auto 0px 210px;
+}
+
+span.forgotpsd a {
+    float: right;
+    color: whitesmoke;
+}
+
+.forgotpsd a{
+    color: #9a5fe8;
+}
+  
+.forgotpsd a:link{
+    text-decoration: none;
+}
+
+.register{
+    color: #333;
+    text-align: center;
+    padding-top: 0%;
+    font-size: 12px;
+}
+  
+.register a{
+    color:#9a5fe8;
+    font-size: 12px;
+}
+  
+.register a:link{
+    text-decoration: none;
+}
+
+/* Media queries for the responsiveness of the page */
+@media screen and (max-width: 600px) {
+    form{
+      width: 25rem;
+    }
+}
+  
+@media screen and (max-width: 400px) {
+    form{
+      width: 20rem;
+    }
+}

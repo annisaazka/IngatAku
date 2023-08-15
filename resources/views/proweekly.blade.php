@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Weekly</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/pro-weekly.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bx-list-ul'></i>
+      <span class="logo_name">IngatAku</span>
+    </div>
+      <ul class="nav-links">
+        <li>
+          <a href="/prodashboard">
+            <i class='bx bx-grid-alt' ></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="/protodos">
+            <i class='bx bx-bar-chart-alt-2 icon' ></i>
+            <span class="links_name">To-Dos</span>
+          </a>
+        </li>
+        <li>
+          <a href="/proupcoming">
+            <i class='bx bx-bell icon' ></i>
+            <span class="links_name">Upcoming Task</span>
+          </a>
+        </li>
+        <li>
+          <a href="/proweekly" class="active">
+            <i class='bx bx-message-rounded icon' ></i>
+            <span class="links_name">Weekly</span>
+          </a>
+        </li>
+        <li>
+          <a href="/pronotes">
+            <i class='bx bx-folder-open icon' ></i>
+            <span class="links_name">Notes</span>
+          </a>
+        </li>
+        <li>
+          <a href="/profile">
+            <i class='bx bx-user' ></i>
+            <span class="links_name">Profile</span>
+          </a>
+        </li>
+        <li class="log_out">
+          <a href="/">
+            <i class='bx bx-log-out'></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Weekly</span>
+      </div>
+    </nav>
+
+    <div class="home-content">
+      <div class="sales-boxes">
+        <div class="recent-sales box">
+          <div class="sales-details">
+            <table class="data-table">
+            <thead>
+            <tr>
+              <th>Task Name</th>
+              <th>Day</th>
+              <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+              @foreach ($data as $item)
+              <tr>
+                <th>{{ $item->task_name }}</th>
+                <td>{{ $item->task_day }}</td>
+                <td>
+                  <div class="button">
+                    <a href="{{ route('proweekly.edit', $item->id) }}" method="post">Edit</a>
+                    <a href="{{ route('proweekly.destroy', $item->id) }}" method="post">delete</a>
+                  </div>
+                </td>
+              </tr>
+              @endforeach
+            </tbody>
+            </table>
+          <div class="addbutton">
+            <a href="{{ route('proweekly.addnew') }}">Add New Task</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+   let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+ </script>
+
+</body>
+</html>
